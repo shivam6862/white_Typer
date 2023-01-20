@@ -1,0 +1,54 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/result.css">
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <main class="grid">
+        <% if (prods.length == 0) { %>
+            <h1 class="heading">! Nothing is here complete your first typing test !</h1>
+        <% } else { %>
+            <h1 class="heading">Your Result</h1>
+            <div>
+                <div class="mistake">Typing Mistake ... </div>
+                <% if (prods.totalWrong == 0 && prods.missword == 0) { %>
+                    <div class="congratulationtop">Congratulations 100% Correct!..</div>
+                <% } else { %>
+                    <div class="box">
+                        <div  class="correctword ">
+                            <h1 class="underlin">Correct Words</h1>
+                            <% for (let product of prods.correctwrong) { %>
+                                <h1><%= product %></h1>
+                            <% } %>
+                        </div>
+                        <div  class="wrongword">
+                            <h1 class="underlin">Wrong Word typed</h1>
+                            <% for (let product of prods.wrongs) { %>
+                                <h1><%= product %></h1>
+                            <% } %>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+            <div class="Correct">
+            Correct Word :&nbsp;<span id="correct"><%= prods.totalCorrect %></span><span>&nbsp;Word</span>
+            </div>
+            <div class="Wrong">
+            Wrong Word :&nbsp;<span id="wrong"></span><%= prods.totalWrong %><span>&nbsp;Word</span>
+            </div>
+            <div class="missword">
+            Missed Word :&nbsp;<span id="missword"></span><%= prods.missword %><span>&nbsp;Word</span>
+            </div>
+            <div class="speed">
+            WPM :&nbsp;<span id="speed"></span><%= prods.totalSpeed %><span>&nbsp;Word</span>
+            </div>
+            <div class="congratulation">
+                <div>
+                    Congratulations on your incredible success! ..&nbsp;<span>&nbsp;Try Again!</span>
+                </div>
+            </div>
+        <% } %>
+    </main>
+<%- include('includes/end.ejs') %>

@@ -1,0 +1,47 @@
+<header class="main-header">
+    <button class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </button>
+    <nav class="main-header__nav">
+        <button class="hamburger1">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </button>
+        <ul class="main-header__item-list">
+            <li class="main-header__item"><a class="<%= path === '/' ? 'active' : '' %>" href="/">Start</a></li>
+            <% if (!isAuthenticated) { %>
+                <li class="main-header__item"><a class="<%= path === '/admin/demotyping' ? 'active' : '' %>" href="/admin/demotyping">Demotyping</a></li>
+            <% }%>
+            <% if (isAuthenticated) { %>
+                <li class="main-header__item"><a class="<%= path === '/admin/typing' ? 'active' : '' %>" href="/admin/typing">Typing</a></li>
+                <li class="main-header__item"><a class="<%= path === '/result' ? 'active' : '' %>" href="/result">Result</a></li>
+            <% }%>
+            <li class="main-header__item"><a class="<%= path === '/admin/reset' ? 'active' : '' %>" href="/admin/reset">Reset</a></li>
+            <% if (isAuthenticated) { %>
+                <li class="main-header__item"><a class="<%= path === '/histroy' ? 'active' : '' %>" href="/histroy">Histroy</a></li>
+            <% }%>
+        </ul>
+        <ul class="main-header__item-list">
+            <% if (!isAuthenticated) { %>
+                <li class="main-header__item">
+                    <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a>
+                </li>
+                <li class="main-header__item">
+                    <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Signup</a>
+                </li>
+            <% } else { %>
+                <li class="main-header__item">
+                    <form action="/logout" method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <button type="submit" class="logout">Logout</button>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
+<div class="backdrop"></div>
+<script src="/js/main2.js"></script>

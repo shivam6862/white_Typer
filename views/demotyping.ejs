@@ -1,0 +1,36 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/typing.css" />
+</head>
+
+<body>
+   <%- include('includes/navigation.ejs') %>
+   <main>
+        <form class="product-form">
+            <div class="form-control">
+                <label for="title" class="heading">👩‍💻 White Typer's 👨‍💻</label>
+                <div class="paragraph">
+                    <h2 style="color: white; margin: 0px; padding-top: 0rem;">This is a Demo Typing Page!</h2>
+                    <h2 style="color: white; margin: 0px; padding-top: 0.5rem;">Learn Touch Typing for free!</h2>
+                </div>
+                <textarea
+                type="text"
+                name="title"
+                id="title"
+                autocomplete="off"
+                autofocus
+                required
+                rows="10"
+                onselectstart="return false"
+                oncut="return false"
+                oncopy="return false"
+                onpaste="return false"
+                ondrag="return false"
+                ondrop="return false"
+                ></textarea>
+            </div>
+            <div class="timer">Time left: <span type="number" name="time" id="time">0 s</span></div>
+        </form>
+   </main>
+   <script src="/js/main.js"></script>
+<%- include('includes/end.ejs') %>

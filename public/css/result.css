@@ -1,0 +1,157 @@
+body {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: #0ec2ad;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+.mistake {
+  font-size: 30px;
+  color: rgb(251, 24, 24);
+  margin: 0px 0px 1rem 0px;
+  position: relative;
+  margin-right: 25%;
+}
+
+.wrongword {
+  font-size: 12.5px;
+  color: rgb(251, 24, 24);
+  padding-left: 2.5%;
+  margin: -2px;
+  border-left: 2px dashed #0ec2ad;
+}
+.correctword {
+  font-size: 12.5px;
+  color: rgb(237, 231, 56);
+  padding-right: 2.5%;
+  border-right: 2px dashed #0ec2ad;
+}
+
+.congratulationtop {
+  font-size: 25px;
+  color: #0ec2ad;
+  margin-top: 0.5rem;
+  margin-left: 5%;
+}
+
+.Correct {
+  font-size: 24px;
+  color: rgb(241, 168, 32);
+  margin-top: 1rem;
+  position: relative;
+  margin-right: 40%;
+  margin-top: 5rem;
+}
+
+.Wrong {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  margin-right: 0%;
+}
+
+.missword {
+  font-size: 24px;
+  color: rgb(26, 244, 34);
+  display: inline;
+  position: relative;
+  margin-right: -40%;
+}
+.speed {
+  font-size: 28px;
+  color: #09e7cd;
+  margin-top: 2rem;
+}
+.congratulation {
+  font-size: 32px;
+  color: #0ec2ad;
+  margin-top: 4rem;
+  position: relative;
+  display: inline-block;
+  overflow-x: hidden;
+  animation: shake 10s ease-in-out infinite;
+}
+.keybord {
+  margin: 2rem auto;
+  border: 2px solid white;
+  padding: 4px 4px 0px 4px;
+  border-radius: 5px;
+  width: 75%;
+}
+.keybord img {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  filter: grayscale(100%);
+  filter: drop-shadow(0 0 .60rem rgb(255, 255, 255));
+}
+.grid {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 0rem 2rem 0rem 2rem;
+  filter: drop-shadow(0 5rem 5rem rgb(255, 255, 255));
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.underlin {
+  font-size: 25px;
+  color: #0ec2ad;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0ec2ad;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(10%);
+  }
+
+  12.5% {
+    transform: translate(-15%);
+  }
+
+  25% {
+    transform: translate(15%);
+  }
+
+  37.5% {
+    transform: translate(-15%);
+  }
+
+  50% {
+    transform: translate(15%);
+  }
+
+  67.5% {
+    transform: translate(-15%);
+  }
+
+  75% {
+    transform: translate(15%);
+  }
+
+  87.5% {
+    transform: translate(-15%);
+  }
+
+  100% {
+    transform: translate(10%);
+  }
+}

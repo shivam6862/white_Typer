@@ -1,0 +1,37 @@
+.error {
+  padding-top: 5rem;
+}
+.error_number {
+  font-size: 15rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: rgb(255, 149, 149);
+}
+.error_reason {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 0;
+  margin: 0px 0px 10px 0px;
+  color: rgb(250, 72, 72);
+}
+.error_des {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0;
+  margin: 0px 0px 20px 0px;
+  color: rgb(198, 226, 251);
+}
+.error_work {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: rgb(198, 226, 251);
+}
+@media (max-width: 768px) {
+  .error_number {
+    font-size: 10rem;
+  }
+}

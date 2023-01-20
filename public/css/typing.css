@@ -1,0 +1,72 @@
+.product-form {
+  max-width: 95%;
+  margin: auto;
+}
+
+.form-control {
+  margin: 1rem 0;
+  color: white;
+}
+
+.form-control label,
+.form-control textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-control textarea {
+  border: 2px solid #0ec2ad;
+  font: inherit;
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+}
+
+button {
+  font: inherit;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid  #0ec2ad;
+  color:  #0ec2ad;
+  background: white;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+  float: right;
+}
+
+button:hover,
+button:active {
+  background-color:  #0ec2ad;
+  color: white;
+}
+
+.paragraph {
+  border: 2px solid #0ec2ad;
+  font: inherit;
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+
+.heading {
+  margin-top: 2.5rem; 
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 1rem;
+  font-size: 28px;
+  text-align: center;
+}
+
+.timer {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  position: relative;
+  float: left;
+  color: rgb(245, 17, 62);
+}

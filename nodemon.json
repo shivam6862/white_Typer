@@ -1,0 +1,7 @@
+{
+    "env": {
+        "MONGO_USER": "shivam",
+        "MONGO_PASSWORD": "shivam6862",
+        "MONGO_DEFAULT_DATABASE": "whiteTyper"
+    }
+}

@@ -1,0 +1,45 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/typing.css" />
+</head>
+
+<body>
+   <%- include('includes/navigation.ejs') %>
+   <main>
+        <form class="product-form" action="/admin/typing" method="POST">
+            <div class="form-control">
+                <label for="title" class="heading">👩‍💻 White Typer's 👨‍💻</label>
+                <% if (reset.length <= 0) { %>
+                    <div class="paragraph">
+                        <h1 style="color: white; margin: 0px; padding-top: 0rem;">First Reset it for typing!</h1>
+                    </div>
+                <% } else { %>
+                    <div class="paragraph">
+                        <%= reset.title %>    
+                    </div>
+                <% } %>
+                <textarea
+                type="text"
+                name="title"
+                id="title"
+                autocomplete="off"
+                autofocus
+                required
+                rows="10"
+                onselectstart="return false"
+                oncut="return false"
+                oncopy="return false"
+                onpaste="return false"
+                ondrag="return false"
+                ondrop="return false"
+                ></textarea>
+            </div>
+            <div class="timer">Time left: <span type="number" name="time" id="time">0 s</span></div>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <% if (isAuthenticated) { %>
+                <button type="submit">Submit it!</button>
+            <% } %>
+        </form>
+   </main>
+   <script src="/js/main.js"></script>
+<%- include('includes/end.ejs') %>

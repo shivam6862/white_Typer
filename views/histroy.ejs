@@ -1,0 +1,42 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/histroys.css" />
+</head>
+
+<body>
+   <%- include('includes/navigation.ejs') %>
+   <main class="heading">
+    
+        <% if (histroys.length <= 0) { %>
+            <h1 style="color: white; margin: 0px; padding-top: 0rem;">Nothing is here do your first typing test !</h1>
+        <% } else { %>
+            <ul class="histroys">
+                <% histroys.forEach(histroy => { %>
+                    <li class="histroys__item">
+                        <h1>Histroy</h1>
+                        <!-- <h1>Histroy - # <%= histroy.id %></h1> -->
+                        <ul class="histroys__products">
+                            <li class="histroys__products-item"><span>Total Correct - </span><%= histroy.totalCorrect %></li>
+                            <li class="histroys__products-item"><span>Total Wrong - </span><%= histroy.totalWrong %></li>
+                            <li class="histroys__products-item"><span>Total Speed - </span><%= histroy.totalSpeed %></li>
+                            <li class="histroys__products-item"><span>Total Missword - </span><%= histroy.missword %></li>
+                            <ul class="histroys__products-item">
+                                <div>
+                                    <li class="histroys__products-item1"><span>Appearing Time -- </span><%= histroy.date %></li>
+                                </div>
+                                <div>
+                                    <form action="/histroy-delete-item" method="POST">
+                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                        <input type="hidden" value="<%= histroy.id %>" name="histroyId">
+                                        <button class="btn danger" type="submit">Delete</button>
+                                    </form>
+                                </div>
+                            </ul>
+                        </ul>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+        <%- include('includes/pagination.ejs', {currentPage: currentPage, nextPage: nextPage, previousPage: previousPage, lastPage: lastPage, hasNextPage: hasNextPage, hasPreviousPage: hasPreviousPage}) %>
+    </main>
+<%- include('includes/end.ejs') %>
